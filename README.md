@@ -3,7 +3,7 @@ This repository provides the processing flow of Ninapro datasets and the pytorch
 
 ## Ninapro Dataset Processing
 The experiment are taken on the [Ninapro dataset](http://ninaweb.hevs.ch/). The first sub-dataset DB1 and second sub-dataset DB2 are ultilized. 
-1. Firstly download the [Ninapro DB1](http://ninaweb.hevs.ch/data1) and [Ninapro DB2](http://ninaweb.hevs.ch/data2) datasets. And then extract the data files from the zip files. We provide two jupyter notebooks [extractFile_db1](https://github.com/increase24/Ninapro-dataset-processing/processing/extractFile_db1.ipynb) / [extractFile_db2](https://github.com/increase24/Ninapro-dataset-processing/processing/extractFile_db2.ipynb) under the directory **processing** for extracting DB1 / DB2 respectively.
+1. Firstly download the [Ninapro DB1](http://ninaweb.hevs.ch/data1) and [Ninapro DB2](http://ninaweb.hevs.ch/data2) datasets. And then extract the data files from the zip files. We provide two jupyter notebooks [extractFile_db1](https://github.com/increase24/Ninapro-dataset-processing/blob/master/processing/extractFile_db1.ipynb) / [extractFile_db2](https://github.com/increase24/Ninapro-dataset-processing/blob/master/processing/extractFile_db2.ipynb) under the directory **processing** for extracting DB1 / DB2 respectively.
 After extraction, your directory tree should look like this: 
 
 ```
@@ -26,7 +26,7 @@ ${ROOT}/data/ninapro
         └── S40_E3_A1.mat
 ```
 
-2. Secondly run the jupyter notebook script [process_db1](https://github.com/increase24/Ninapro-dataset-processing/processing/process_db1.ipynb) / [process_db2](https://github.com/increase24/Ninapro-dataset-processing/processing/process_db2.ipynb), which convert the mat files to txt files.
+2. Secondly run the jupyter notebook script [process_db1](https://github.com/increase24/Ninapro-dataset-processing/blob/master/processing/process_db1.ipynb) / [process_db2](https://github.com/increase24/Ninapro-dataset-processing/blob/master/processing/process_db2.ipynb), which convert the mat files to txt files.
 After convertion, your directory tree should look like this: 
 ```
 ${ROOT}/data/ninapro
@@ -68,7 +68,7 @@ utilizing dataloader of Ninapro DB1:
 from dataloaders.db2 import get_dataloader_db2
 train_loader, val_loader = get_dataloader_db2(DataConfig, path_subject)
 ```
-the configuration of **DataConfig** and **path_subject** can be seen from the unit testing of [db1.py](https://github.com/increase24/Ninapro-dataset-processing/dataloaders/db1.py) and [db2.py](https://github.com/increase24/Ninapro-dataset-processing/dataloaders/db2.py)
+the configuration of **DataConfig** and **path_subject** can be seen from the unit testing of [db1.py](https://github.com/increase24/Ninapro-dataset-processing/blob/master/dataloaders/db1.py) and [db2.py](https://github.com/increase24/Ninapro-dataset-processing/blob/master/dataloaders/db2.py)
 
 ## Contact
 If you have any questions, feel free to contact me through jia.zeng@sjtu.edu.cn or Github issues.
